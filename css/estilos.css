@@ -1,0 +1,198 @@
+/* ==========================================================
+   Actividad Formativa 6 - Jonder Andrey Chacón Umaña
+   ========================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* ---------- Encabezado y barras de navegación ---------- */
+header {
+    background-color: #123c69;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+/* Estilo aplicado a ambos nav */
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #ffffff;
+    color: #123c69;
+}
+
+/* Separacion entre menu principal y secundario */
+header nav:first-of-type {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Contenedor principal (main) ---------- */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+main hr {
+    border: none;
+    border-top: 3px solid #123c69;
+    margin-bottom: 15px;
+}
+
+/* Título principal de la página */
+main h1 {
+    text-align: center;
+    color: #123c69;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- Estilo general aplicado a cada sección ---------- */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #1e88e5; /* franja azul a la izquierda */
+    background-color: #f9fbfd;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #123c69;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1e88e5;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+section article {
+    margin-bottom: 12px;
+}
+
+section article h4 {
+    color: #1e88e5;
+    margin-bottom: 4px;
+}
+
+/* Imagen de la sección de información personal */
+#infoPersonal img {
+    border-radius: 8px;
+    border: 3px solid #1e88e5;
+    width: 150px;
+    height: 200px;
+}
+
+/* Listas dentro de la experiencia laboral */
+#EpLaboral ul {
+    margin-left: 20px;
+}
+
+/* Tabla de la sección resumen */
+#resumen table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#resumen caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #123c69;
+}
+
+#resumen th, #resumen td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+#resumen th {
+    background-color: #123c69;
+    color: #ffffff;
+}
+
+#resumen tr:nth-child(even) {
+    background-color: #eef3f8;
+}
+
+/* ---------- Galería de imágenes (galeria.html) ---------- */
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila */
+    gap: 15px;
+}
+
+#galeria figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#galeria figure:hover {
+    transform: scale(1.03);
+}
+
+#galeria img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+#galeria figcaption {
+    text-align: center;
+    padding: 6px;
+    font-size: 0.9rem;
+    background-color: #f9fbfd;
+}
+
+/* En pantallas pequeñas la galería pasa a 1 columna */
+@media (max-width: 600px) {
+    #galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #123c69;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+}
